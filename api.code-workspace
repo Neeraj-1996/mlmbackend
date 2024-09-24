@@ -1,0 +1,69 @@
+{
+  "folders": [
+		{
+			"path": "."
+		}
+	],
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "settings": {
+		"javascript.updateImportsOnFileMove.enabled": "always",
+		"eslint.options": {
+			"configFile": "./.eslintrc.json"
+		},
+		// "eslint.autoFixOnSave": true,
+		"editor.formatOnSave": true,
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		"diffEditor.renderSideBySide": false,
+		"breadcrumbs.enabled": true,
+		"diffEditor.ignoreTrimWhitespace": false,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "explicit",
+			"source.fixAll.eslint": "explicit"
+		},
+		"workbench.startupEditor": "newUntitledFile",
+		"git.suggestSmartCommit": false,
+		"terminal.integrated.rendererType": "dom",
+		"git.confirmSync": false,
+		"window.zoomLevel": -1,
+		"bracketPairColorizer.depreciation-notice": false,
+		"[handlebars]": {
+			"editor.formatOnSave": false
+		},
+		"cSpell.words": [],
+	},
+	"launch": {
+		// Use IntelliSense to learn about possible attributes.
+		// Hover to view descriptions of existing attributes.
+		// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+		"version": "0.2.0",
+		"compounds": [
+			{
+				"name": "back_ends",
+				"configurations": [
+					"API",
+				],
+				"stopAll": true
+			}
+		],
+		"configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "API",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "console": "integratedTerminal", // externalTerminal or integratedTerminal respectively. The default is internalConsole.
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\src\\app.js",
+			"cwd": "${workspaceFolder}",
+        }
+    ]
+	}
+}
